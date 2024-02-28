@@ -33,12 +33,22 @@
     <!-- Bottom and top tabs-->
     
     <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
+
+        <Tab Title="Domestic" Icon="paw.png">
+            <ShellContent
+                 Title="Cats"
+                 ContentTemplate="{DataTemplate views:Cats}"
+                 Route="Cats" 
+              
+                />
+            <ShellContent
+              Title="Dogs"
+              ContentTemplate="{DataTemplate views:Dogs}"
+               Route="Dogs" 
+   
+     />
+        </Tab>
         
-        <ShellContent
-            Title="Domestic" Icon="paw.png"
-            ContentTemplate="{DataTemplate views:Domestic}"
-            Route="Domestic" />
-       
         <ShellContent
             Title="Monkeys" Icon="monkey.png"
             ContentTemplate="{DataTemplate views:Monkeys}"
@@ -53,6 +63,13 @@
             ContentTemplate="{DataTemplate views:Bears}"
             Route="Bears" />
     </FlyoutItem>
-    
-    
+    <MenuItem
+        Command="{Binding HelpCommand}"
+        IconImageSource="help.png"
+        Text="Help"
+       />
+
+
+
+
 </Shell>
